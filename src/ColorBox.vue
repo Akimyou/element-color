@@ -74,7 +74,6 @@ export default {
     },
     tempColor (val) {
       if (rgex.test(val)) {
-        // this.color = val
         this.$emit('colorChange', val)
         this.error = false
       } else {
