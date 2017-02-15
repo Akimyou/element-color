@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "webpack-dev-server -d --inline --hot --env.dev",
-    "build": "rimraf dist && webpack -p --progress --hide-modules"
+    "build": "rimraf docs && webpack -p --progress --hide-modules"
   },
   "files": [
     "src"
