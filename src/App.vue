@@ -94,6 +94,8 @@
       <p>每个颜色都可独立指定。</p>
       <p>命名中的颜色单词仅仅是变量名，没有实际色值含义。</p>
       <p>调好颜色后可写到 element theme 的颜色配置中使用。推荐直接写16进制值，配合工具使用更加灵活。</p>
+      <h3>工程地址</h3>
+      <p><a href="https://github.com/MIKUScallion/element-color" target="_blank">https://github.com/MIKUScallion/element-color</a></p>
     </section>
     <footer></footer>
   </div>
