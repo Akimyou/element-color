@@ -135,6 +135,7 @@ export default {
   mounted () {
     // init
     this.buildDarkPrimary()
+    this.buildLightPrimary()
 
     this.buildBlack()
     this.buildSilver()
@@ -156,6 +157,7 @@ export default {
   watch: {
     primary () {
       this.buildDarkPrimary()
+      this.buildLightPrimary()
 
       this.buildBlack()
       this.buildSilver()
@@ -184,6 +186,14 @@ export default {
       hsl.color[2] = hsl.color[2] * 0.9
       this.darkPrimary = hsl.hex().toString()
     },
+
+    buildLightPrimary () {
+      const hsl = Color(this.primary).hsl()
+      hsl.color[1] = 99
+      hsl.color[2] = hsl.color[2] * 1.19
+      this.lightPrimary = hsl.hex().toString()
+    },
+
 
     buildBlack () {
       const hsl = Color(this.primary).hsl()

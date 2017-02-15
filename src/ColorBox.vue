@@ -65,7 +65,24 @@ export default {
   },
   computed: {
     fontEndColor () {
-      return Color(this.color).negate().hex().toString()
+
+      let h = 0,
+          s = 0,
+          l = 0,
+          diffStep = 50
+
+      h = Color(this.color).hsl().color[0]
+      s = Color(this.color).hsl().color[1]
+
+      // return Color(this.color).negate().hex().toString()
+      if (Color(this.color).hsl().color[2] > diffStep) {
+        l = Color(this.color).hsl().color[2] - diffStep
+      }
+      else {
+        l = Color(this.color).hsl().color[2] + diffStep
+      }
+
+      return Color.hsl(h, s, l)
     }
   },
   watch: {
