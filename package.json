@@ -22,6 +22,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "color": "^1.0.3",
     "element-ui": "^1.1.2",
     "vue": "^2.1.8"
   },
