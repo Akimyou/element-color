@@ -22,7 +22,7 @@
       </el-row>
       <h3>辅助色</h3>
       <p>除了主色外的场景色，需要在不同的场景中使用（例如危险色表示危险的操作）。</p>
-      <el-row :gutter="12">
+      <el-row :gutter="12" style="margin-bottom: 5px;">
         <el-col :span="8">
           <color-box name="Success" :color="success" @colorChange="colorChange('success', $event)"></color-box>
         </el-col>
@@ -31,6 +31,11 @@
         </el-col>
         <el-col :span="8">
           <color-box name="Danger" :color="danger" @colorChange="colorChange('danger', $event)"></color-box>
+        </el-col>
+      </el-row>
+      <el-row :gutter="12">
+        <el-col :span="8">
+          <color-box name="Info" :color="info" @colorChange="colorChange('info', $event)"></color-box>
         </el-col>
       </el-row>
       <h3>中性色</h3>
@@ -110,6 +115,7 @@ export default {
       primary: '#20A0FF',
       darkPrimary: '#1D8CE0',
 
+      info: '#50bfff',
       success: '#13CE66',
       warning: '#F7BA2A',
       danger: '#FF4949',
@@ -231,23 +237,23 @@ export default {
 
     buildGray () {
       const hsl = Color(this.primary).hsl()
-      hsl.color[0] += 3
-      hsl.color[1] = 16
-      hsl.color[2] = 58
+      hsl.color[0] += 0
+      hsl.color[1] = 28
+      hsl.color[2] = 86
       this.gray = hsl.hex().toString()
     },
     buildLightGray () {
       const hsl = Color(this.black).hsl()
-      hsl.color[0] += 3
-      hsl.color[1] = 23
-      hsl.color[2] = 67
+      hsl.color[0] += 10
+      hsl.color[1] = 33
+      hsl.color[2] = 92
       this.lightGray = hsl.hex().toString()
     },
     buildExtraLightGray () {
       const hsl = Color(this.black).hsl()
-      hsl.color[0] += 0
-      hsl.color[1] = 26
-      hsl.color[2] = 80
+      hsl.color[0] += 6
+      hsl.color[1] = 33
+      hsl.color[2] = 95
       this.extraLightGray = hsl.hex().toString()
     },
 
