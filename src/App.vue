@@ -89,7 +89,7 @@
       <h3>色值生成规则</h3>
       <p>Primary 独立指定</p>
       <p>Light Primary 、Dark Primary 派生自 Primary</p>
-      <p>Success 、Warning 、Danger 独立指定</p>
+      <p>Success 、Warning 、Danger 、Info 独立指定</p>
       <p>Base Black 、Base White 独立指定</p>
       <p>Black 、Silver 、Gray 派生自 Primary</p>
       <p>Light Black 、Extra Light Black ，Light Silver 、Extra Light Silver ，Light Gray、Extra Light Gray 派生自 Black</p>
@@ -117,13 +117,13 @@ export default {
       primary: '#20A0FF',
       darkPrimary: '#1D8CE0',
 
-      info: '#50bfff',
+      info: '#50BFFF',
       success: '#13CE66',
       warning: '#F7BA2A',
       danger: '#FF4949',
 
-      baseBlack: '#000',
-      baseWhite: '#fff',
+      baseBlack: '#000000',
+      baseWhite: '#FFFFFF',
 
       black: '#1F2D3D',
       lightBlack: '#324057',
